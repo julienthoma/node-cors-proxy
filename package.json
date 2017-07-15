@@ -19,7 +19,7 @@
   "homepage": "https://github.com/julienthoma/node-cors-proxy#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
-    "express": "^4.15.3",
-    "express-cors": "0.0.3"
+    "cors": "^2.8.4",
+    "express": "^4.15.3"
   }
 }
