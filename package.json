@@ -1,0 +1,24 @@
+{
+  "name": "cors-proxy",
+  "version": "1.0.0",
+  "description": "node cors proxy",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julienthoma/node-cors-proxy.git"
+  },
+  "author": "Julien Thoma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/julienthoma/node-cors-proxy/issues"
+  },
+  "homepage": "https://github.com/julienthoma/node-cors-proxy#readme",
+  "dependencies": {
+    "express": "^4.15.3",
+    "express-cors": "0.0.3"
+  }
+}
