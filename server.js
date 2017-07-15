@@ -1,22 +1,27 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const cors = require('cors');
-const request = require('request');
+const express = require("express");
+const bodyParser = require("body-parser");
+const cors = require("cors");
+const request = require("request");
 const app = express();
- 
-app.use(cors());
-
 const port = process.env.PORT || 3000;
 
-app.listen(port);
+app.use(cors());
 app.use(bodyParser.json());
+app.listen(port);
 
-app.post('/', ({ target, body }, res) => {
-    request.post(target,
-    body,
+app.post("/", ({ body }, res) => {
+  request(
+    {
+      url: body.target,
+      method: "POST",
+      json: true,
+      headers: { "content-type": "application/json" },
+      body: body.body
+    },
     (_req, _res) => {
-        res.send(_res);
-    });
+      res.send(_res);
+    }
+  );
 });
 
 module.exports = app;
